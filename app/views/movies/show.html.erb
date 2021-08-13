@@ -1,0 +1,12 @@
+<h1>Show<h1>
+
+<h2><%= @movie.title %></h2>
+
+<ul class="list-group">
+  <% @movie.bookmarks.each do |movie| %>
+    <li class="list-group-item"><%= bookmark.comment %></li>
+  <% end %>
+</ul>
+
+<p><%= link_to 'Leave a bookmark', new_movie_bookmark_path(@movie) %></p>
+<p><%= link_to 'Movies', movies_path %></p>
